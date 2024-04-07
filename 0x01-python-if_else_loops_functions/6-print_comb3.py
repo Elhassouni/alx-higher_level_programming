@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-for i in range(0, 89):
-    flag = False 
-    for j in range(10,90,10):
-        if i == j:        
-            flag = True
-            break
+for i in range(0, 10):
+    for x in range(i + 1, 10):
+        print("{}".format(i), end='')
+        if i == 8 and x == 9:
+            print("{:d}".format(x))
         else:
-            i + 1
-            print("{:02d}".format(i),  end=', ')
-
+            print("{:d}".format(x), end=', ')
