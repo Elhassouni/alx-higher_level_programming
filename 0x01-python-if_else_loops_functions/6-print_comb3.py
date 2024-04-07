@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-j = 0
-for i in range(0, 10):
-    for j in range (j + i)
-        if i < 99:
-            print("{:02d}".format(j),  end=', ')
+for i in range(0, 89):
+    flag = False 
+    for j in range(10,90,10):
+        if i == j:        
+            flag = True
+            break
         else:
-            print("{}".format(i))
+            i + 1
+            print("{:02d}".format(i),  end=', ')
+
