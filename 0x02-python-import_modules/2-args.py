@@ -4,7 +4,7 @@ import sys
 counter = 0
 result = len(sys.argv)
 if result == 1:
-    print(f"{0} argument.")
+    print(f"{0} arguments.")
 elif result == 2:
     print(f"{result - 1} argument:")
 else:
