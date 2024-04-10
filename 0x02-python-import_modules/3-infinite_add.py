@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 import sys
-result = 0
-for i in sys.argv[1:]:
-    num_arguments = len(sys.argv)
-    if num_arguments == 1:
+if __name__ == "__main__":
+    result = 0
+    num_arg = len(sys.argv)
+    if num_arg == 1:
         print(f"{0}")
-    else:
+    for i in sys.argv[1:]:
         result += int(i)
-if result != 0:
-    print("{}".format(result))
+    if result != 0:
+        print("{}".format(result))
