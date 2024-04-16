@@ -6,7 +6,3 @@ def max_integer(my_list=[]):
         my_list.sort()
         result = my_list[-1]
         return result
-
-list = []
-max_value = max_integer(list)
-print("Max: {}".format(max_value))
