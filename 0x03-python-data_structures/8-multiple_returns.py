@@ -2,4 +2,4 @@
 
 def multiple_returns(sentence):
         """Returns the length of the text and the first character."""
-        return len(sentence), sentence[0] if text else None
+        return len(sentence), sentence[0] if sentence else None
