@@ -39,3 +39,7 @@
 | 10. Best score | [10-best_score.py](./10-best_score.py) |
 | 11. Multiply by using map | [11-multiply_list_map.py](./11-multiply_list_map.py) |
 | 12. Roman to Integer | [12-roman_to_int.py](./12-roman_to_int.py) |
+| 13. Weighted average! | [100-weight_average.py](./100-weight_average.py) |
+| 14. Squared by using map | [101-square_matrix_map.py](./101-square_matrix_map.py) |
+| 15. Delete by value | [102-complex_delete.py](./102-complex_delete.py) |
+| 16. CPython #1: PyBytesObject | [103-python.c](./103-python.c) |
