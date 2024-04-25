@@ -18,7 +18,7 @@ def safe_print_list(my_list=[], x=0):
             print()
             return _sum
         elif x == 0:
-           print(f'{x}')
+            print(f'{x}')
         print()
     except (ValueError, IndexError, TypeError):
         print("x is zero Enter bigger number and list is empty")
