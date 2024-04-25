@@ -10,7 +10,7 @@ def safe_print_list(my_list=[], x=0):
                 print(f'{key}', end='')
             print()
             return result
-        elif x < result and x == 0:
+        elif x < result or x == 0:
             _sum = 0
             for value in range(x):
                 print(f'{my_list[value]}', end='')
