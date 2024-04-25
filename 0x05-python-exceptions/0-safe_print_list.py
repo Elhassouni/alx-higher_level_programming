@@ -10,15 +10,13 @@ def safe_print_list(my_list=[], x=0):
                 print(f'{key}', end='')
             print()
             return result
-        elif x < result and x != 0:
+        elif x < result and x == 0:
             _sum = 0
             for value in range(x):
                 print(f'{my_list[value]}', end='')
                 _sum += 1
             print()
             return _sum
-        elif x == 0:
-            print(f'{x}')
         print()
     except (ValueError, IndexError, TypeError):
         print("x is zero Enter bigger number and list is empty")
