@@ -13,10 +13,8 @@ def list_division(my_list_1, my_list_2, list_length):
             if isinstance(my_list_1[x], int) or isinstance(my_list_2[x],
                                                            float):
                 result = my_list_1[x] / my_list_2[x]
-    # if isinstance(my_list_1[x], str) or isinstance(my_list_2[x], str):
-    # result = my_list_1[x] / my_list_2[x]
-            else:
-                print("wrong type")
+            if isinstance(my_list_1[x], str) or isinstance(my_list_2[x], str):
+                result = my_list_1[x] / my_list_2[x]
         except TypeError:
             print("wrong type")
             result = 0
