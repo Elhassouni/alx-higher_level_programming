@@ -15,17 +15,19 @@ def list_division(my_list_1, my_list_2, list_length):
                                                                float):
                     result = my_list_1[x] / my_list_2[x]
                     new_list.append(result)
+    # if isinstance(my_list_1[x], str) or isinstance(my_list_2[x], str):
+    # result = my_list_1[x] / my_list_2[x]
                 else:
-                    new_list.append(0)
-
+                    print("wrong type")
+            except TypeError:
+                print("wrong type")
+                result = 0
             except ZeroDivisionError:
                 print("division by 0")
-                new_list.append(0)
+                result = 0
             except IndexError:
                 print("out of range")
-                new_list.append(0)
-            except TypeError:
-                print("wrong Type")
-                new_list.append(0)
-    finally:
-        return new_list
+                result = 0
+            finally:
+                new_list.append(result)
+    return new_list
