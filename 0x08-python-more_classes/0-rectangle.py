@@ -11,5 +11,5 @@ Author: Ayoub EL-hassouni
 
 
 class Rectangle:
-    # empty class Rectangle that defines a rectangle:
+    """ empty class Rectangle that defines a rectangle:"""
     pass
