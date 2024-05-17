@@ -65,7 +65,7 @@ class Rectangle:
 
     def __str__(self):
         """print() and str() should print the rectangle
-            with the character # and return resul. """
+            with the character # and return resul """
 
         empty_str = ""
         if self.__width == 0 or self.__height == 0:
@@ -75,4 +75,4 @@ class Rectangle:
                 for i in range(self.__width):
                     empty_str += "#"
                 empty_str += "\n"
-            return empty_str
+            return empty_str.rstrip()
