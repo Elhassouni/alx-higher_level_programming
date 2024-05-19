@@ -13,6 +13,7 @@ class Rectangle:
     """class Rectangle that defines a rectangle"""
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -70,8 +71,10 @@ class Rectangle:
         with the character stored in print_symbol and return result"""
         if self.__width == 0 or self.__height == 0:
             return ""
-    
-        symbol = str(self.print_symbol)  # Ensuring print_symbol is treated as a string
+
+        symbol = str(self.print_symbol)
+        """ Ensuring print_symbol is treated
+            as a string"""
         rect_str = (symbol * self.__width + "\n") * self.__height
         return rect_str.rstrip()  # Remove the trailing newline
 
