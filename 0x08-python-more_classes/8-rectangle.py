@@ -96,17 +96,36 @@ class Rectangle:
         """ printing sting once instance delted"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-    
+
     @staticmethod
-    def bigger_or_equal(rect_1, rect_2): 
-        if isinstance(rect_1, Rectangle):
-            if rect_1 > rect_2:
-                return rect_1
-            elif rect_2 > rect_2:
-                return rect_2
-            elif rect_1 == rect_2:
-                return rect_1
-        else:
+    def bigger_or_equal(rect_1, rect_2):
+        """Compares two Rectangle instances and returns the one with
+            the greater or equal area.
+
+        Parameters
+        ----------
+        rect_1 : Rectangle
+            The first rectangle to compare.
+        rect_2 : Rectangle
+            The second rectangle to compare.
+
+        Returns
+        -------
+        Rectangle
+            The rectangle with the greater or equal area.
+            If both areas are equal, rect_1 is returned.
+
+        Raises
+        ------
+        TypeError
+            If either rect_1 or rect_2 is not an instance of Rectangle.
+        """
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
