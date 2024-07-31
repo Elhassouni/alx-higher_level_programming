@@ -1,0 +1,113 @@
+
+
+Sat Jul  6 20:03:26 2024
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 6.8.0-36-generic (#36-Ubuntu SMP PREEMPT_DYNAMIC Mon Jun 10 10:49:14 UTC 2024) x86_64
+Compiler: GCC 13.2
+ext2fs lib: 1.47.0, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.4
+/dev/sda: LBA, LBA48 support
+/dev/sda: size       1000215216 sectors
+/dev/sda: user_max   1000215216 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Warning: can't get size for Disk /dev/loop28 - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 512 GB / 476 GiB - CHS 62260 255 63, sector size=512 - SSDPR-CX400-512-G2, S/N:GY1051999, FW:SN07181
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14904 64 32, sector size=512 - JetFlash Transcend 16GB, FW:8.07
+Disk /dev/loop0 - 4096 B - 8 sectors (RO), sector size=512
+Disk /dev/loop1 - 325 MB / 310 MiB - 635504 sectors (RO), sector size=512
+Disk /dev/loop10 - 11 MB / 10 MiB - 21952 sectors (RO), sector size=512
+Disk /dev/loop11 - 218 MB / 208 MiB - 427168 sectors (RO), sector size=512
+Disk /dev/loop12 - 220 MB / 210 MiB - 431592 sectors (RO), sector size=512
+Disk /dev/loop13 - 366 MB / 349 MiB - 716176 sectors (RO), sector size=512
+Disk /dev/loop14 - 529 MB / 505 MiB - 1034424 sectors (RO), sector size=512
+Disk /dev/loop15 - 528 MB / 504 MiB - 1032504 sectors (RO), sector size=512
+Disk /dev/loop16 - 96 MB / 91 MiB - 187776 sectors (RO), sector size=512
+Disk /dev/loop17 - 13 MB / 12 MiB - 26472 sectors (RO), sector size=512
+Disk /dev/loop18 - 12 MB / 12 MiB - 25240 sectors (RO), sector size=512
+Disk /dev/loop19 - 40 MB / 38 MiB - 79328 sectors (RO), sector size=512
+Disk /dev/loop2 - 327 MB / 312 MiB - 639600 sectors (RO), sector size=512
+Disk /dev/loop20 - 40 MB / 38 MiB - 79520 sectors (RO), sector size=512
+Disk /dev/loop21 - 487 KB / 476 KiB - 952 sectors (RO), sector size=512
+Disk /dev/loop22 - 462 KB / 452 KiB - 904 sectors (RO), sector size=512
+Disk /dev/loop23 - 199 MB / 190 MiB - 389800 sectors (RO), sector size=512
+Disk /dev/loop24 - 202 MB / 193 MiB - 396480 sectors (RO), sector size=512
+Disk /dev/loop25 - 145 MB / 138 MiB - 284400 sectors (RO), sector size=512
+Disk /dev/loop26 - 95 MB / 90 MiB - 186000 sectors (RO), sector size=512
+Disk /dev/loop27 - 95 MB / 90 MiB - 186024 sectors (RO), sector size=512
+Disk /dev/loop3 - 67 MB / 63 MiB - 130960 sectors (RO), sector size=512
+Disk /dev/loop4 - 67 MB / 63 MiB - 130960 sectors (RO), sector size=512
+Disk /dev/loop5 - 77 MB / 74 MiB - 151992 sectors (RO), sector size=512
+Disk /dev/loop6 - 77 MB / 74 MiB - 152040 sectors (RO), sector size=512
+Disk /dev/loop7 - 283 MB / 270 MiB - 554392 sectors (RO), sector size=512
+Disk /dev/loop8 - 281 MB / 268 MiB - 550200 sectors (RO), sector size=512
+Disk /dev/loop9 - 11 MB / 10 MiB - 21888 sectors (RO), sector size=512
+
+Partition table type defaults to Intel
+Disk /dev/sdc - 15 GB / 14 GiB - JetFlash Transcend 16GB
+Partition table type: Intel
+
+Analyse Disk /dev/sdc - 15 GB / 14 GiB - CHS 14904 64 32
+Current partition structure:
+No partition is bootable
+
+search_part()
+Disk /dev/sdc - 15 GB / 14 GiB - CHS 14904 64 32
+NTFS at 14903/63/32
+heads/cylinder 255 (NTFS) != 64 (HD)
+sect/track 63 (NTFS) != 32 (HD)
+filesystem size           30523136
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS              0   8  1 14903  63 32   30523136 [Transcend]
+     NTFS found using backup sector, blocksize=4096, 15 GB / 14 GiB
+get_geometry_from_list_part_aux head=8 nbr=2
+Warning: the current number of heads per cylinder is 64 but the correct value may be 8.
+
+Results
+   L HPFS - NTFS              0   8  1 14903  63 32   30523136 [Transcend]
+     NTFS found using backup sector, blocksize=4096, 15 GB / 14 GiB
+
+Hint for advanced users: dmsetup may be used if you prefer to avoid rewriting the partition table for the moment:
+echo "0 30523136 linear /dev/sdc 256" | dmsetup create test0
+
+interface_write()
+ 1 * HPFS - NTFS              0   8  1 14903  63 32   30523136 [Transcend]
+write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+
+ntfs_boot_sector
+ 1 * HPFS - NTFS              0   8  1 14903  63 32   30523136 [Transcend]
+     NTFS found using backup sector, blocksize=4096, 15 GB / 14 GiB
+NTFS at 0/8/1
+heads/cylinder 255 (NTFS) != 64 (HD)
+sect/track 63 (NTFS) != 32 (HD)
+filesystem size           1 30523136
+sectors_per_cluster       0 8
+mft_lcn                   0 786432
+mftmirr_lcn               0 2
+clusters_per_mft_record   0 -10
+clusters_per_index_record 0 1
+Boot sector
+Status: Bad
+
+Backup boot sector
+Warning: number of heads/cylinder mismatches 255 (NTFS) != 64 (HD)
+Warning: number of sectors per track mismatches 63 (NTFS) != 32 (HD)
+Status: OK
+
+Sectors are not identical.
+
+A valid NTFS Boot sector must be present in order to access
+any data; even if the partition is not bootable.
+rebuild_NTFS_BS
+SIGHUP detected! TestDisk has been killed.
